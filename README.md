@@ -1,36 +1,31 @@
 # Image Separation Project
 
-Questo progetto si focalizza sulla separazione di immagini utilizzando un'architettura basata su una rete neurale convoluzionale (CNN) con struttura encoder-decoder. L'obiettivo principale è prendere in input un'immagine combinata e restituire le due immagini originali separate. Le prestazioni del modello vengono valutate utilizzando l'errore quadratico medio (MSE) tra le immagini predette e quelle di riferimento.
+This project focuses on separating images using a convolutional neural network (CNN) with an encoder–decoder structure. The main goal is to take a combined image as input and return the two original, separated images. Model performance is evaluated with the mean squared error (MSE) between the predicted images and the reference images.
 
-Contenuto del progetto
+## Project Content
 
-Il progetto è fornito come un notebook Jupyter contenente tutto il codice necessario per il caricamento dei dati, la pre-elaborazione, la definizione del modello, l'addestramento e la valutazione delle prestazioni.
+The project is provided as a Jupyter notebook containing all the code needed for data loading, preprocessing, model definition, training, and performance evaluation.
 
-Dataset
+## Dataset
 
-## I dataset utilizzati per questo progetto sono:
+Datasets used for this project are:
+	•	MNIST: A dataset of handwritten digits composed of 28 × 28‑pixel grayscale images, later resized to 32 × 32.
+	•	Fashion‑MNIST: A dataset of clothing images, also composed of 28 × 28‑pixel grayscale images, resized to 32 × 32.
 
-MNIST: Dataset di cifre scritte a mano, composto da immagini in scala di grigi di dimensione 28x28, successivamente adattate a 32x32.
+The images are normalized (dividing by 255) and randomly combined to create the model’s input dataset.
 
-Fashion-MNIST: Dataset di immagini di capi d'abbigliamento, anch'esso composto da immagini in scala di grigi di dimensione 28x28, adattate a 32x32.
+## Project functionalities
 
-Le immagini vengono normalizzate (dividendo per 255) e combinate casualmente per creare il dataset di input al modello.
+Data preprocessing: Normalization and resizing of images.
 
-## Funzionalità del progetto
+Training‑data generation: Dynamic creation of combined images from random pairs of MNIST and Fashion‑MNIST images.
 
-*Preprocessing dei dati*: Normalizzazione e adattamento delle immagini.
+Model training: Training of the CNN encoder–decoder network with a mean‑squared‑error loss function.
 
-*Generazione dati di training*: Creazione dinamica di immagini combinate a partire da coppie casuali di immagini MNIST e Fashion-MNIST.
+Performance evaluation: Analysis of model performance, metric calculation, and visualization of separation examples.
 
-*Training del modello*: Addestramento della rete CNN encoder-decoder con funzione di perdita basata sull'errore quadratico medio.
+## Reference Datasets
 
-*Valutazione delle performance*: Analisi delle prestazioni del modello, calcolo delle metriche e visualizzazione di esempi di separazione.
-
-## Dataset di riferimento
-
-I dataset utilizzati in questo progetto sono stati importati direttamente grazie a tensorflow:
-
-MNIST Dataset
-
-Fashion-MNIST Dataset
-
+The datasets used in this project are imported directly via TensorFlow:
+	•	MNIST Dataset
+	•	Fashion‑MNIST Dataset
